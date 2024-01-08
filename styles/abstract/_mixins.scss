@@ -1,0 +1,14 @@
+@mixin margem-central($width: 80%) {
+	width: $width;
+	margin: 0 auto;
+}
+@mixin ff-fs-cl($f-family, $f-size, $f-color) {
+	font-family: $f-family;
+	font-size: $f-size;
+	color: $f-color;
+}
+@mixin input {
+	border-radius: 1.5625rem;
+	padding: 1rem;
+	border: none;
+}

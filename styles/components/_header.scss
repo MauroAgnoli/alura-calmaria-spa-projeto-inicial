@@ -1,0 +1,72 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins' ;
+header {
+	background: variaveis.$gradiente-primario;
+	padding: 2rem;
+	nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.6rem;
+		.linha {
+			border-top: 0.0625rem solid black;
+			width: 80%;
+		}
+		ul {
+			display: inline-flex;
+			gap: 2rem;
+			li {
+				list-style: none;
+				a {
+					text-decoration: none;
+					@include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria);
+					font-weight: 500;
+
+					&:hover{
+						color: variaveis.$cor-secundaria;
+					}
+				}
+			}
+		}
+	}
+	#home {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 65rem;
+		@include mixins.margem-central(80%);
+		.textos-home {
+			max-width: 29rem;
+			h1 {
+				font-family: variaveis.$ft-titulos;
+				font-size: 2.625rem;
+				color: variaveis.$cor-primaria;
+				margin-bottom: 2rem;
+				span {
+					color: variaveis.$cor-secundaria;
+				}
+			}
+			.btn-main {
+				width: 17.5rem;
+				height: 4.125rem;
+				color: #fff;
+				border: none;
+				outline: none;
+				border-radius: 4.125rem;
+				background: variaveis.$cor-default;
+				font-size: 1.3rem;
+				cursor: pointer;
+
+				&:hover{
+					background: variaveis.$cor-secundaria;
+				}
+			}
+		}
+		.img-home {
+			max-width: 29.625rem;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
